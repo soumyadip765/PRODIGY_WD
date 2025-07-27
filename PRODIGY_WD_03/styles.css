@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: url('https://thumbs.dreamstime.com/b/vector-image-hand-drawn-game-crosses-tic-tac-toe-pattern-white-background-layers-grouped-easy-editing-illustration-148407344.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 320px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    backdrop-filter: blur(5px);
+}
+
+h1 {
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+h1 i {
+    color: #ff7e5f;
+}
+
+.controls {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+button {
+    background: #4a6fa5;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button.active {
+    background: #ff7e5f;
+}
+
+#difficulty-container {
+    display: none;
+    align-items: center;
+    gap: 5px;
+    margin-left: auto;
+}
+
+#difficulty-container.visible {
+    display: flex;
+}
+
+#difficulty-container span {
+    font-size: 0.8rem;
+    color: #333;
+}
+
+#difficulty-container button {
+    padding: 5px 8px;
+    font-size: 0.7rem;
+}
+
+.status {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    aspect-ratio: 1/1;
+    background: rgba(74, 111, 165, 0.7);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.cell {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    aspect-ratio: 1/1;
+    transition: all 0.2s ease;
+}
+
+.cell:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+.cell.x { color: #4a6fa5; }
+.cell.o { color: #ff7e5f; }
+.cell.winner { 
+    background: rgba(74, 111, 165, 0.4);
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 350px) {
+    #difficulty-container {
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}

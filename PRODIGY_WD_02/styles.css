@@ -1,0 +1,159 @@
+:root {
+    --primary: #b87606e1;
+    --secondary: #6a4907d2;
+    --accent: #4895ef;
+    --dark: #1b263b;
+    --light: #f8f9fa;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://www.shutterstock.com/image-photo/old-gold-pocket-watch-on-260nw-171657911.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.stopwatch-container {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(237, 212, 165, 0.9);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    padding: 30px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.display {
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--dark);
+    margin: 20px 0;
+    letter-spacing: 2px;
+    font-variant-numeric: tabular-nums;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(67, 97, 238, 0.3);
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--dark);
+    border: 1px solid #e0e0e0;
+}
+
+.btn-secondary:hover {
+    background: #f0f0f0;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: var(--shadow);
+}
+
+.laps-container {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.lap-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.lap-item:hover {
+    background: #f9f9f9;
+}
+
+.lap-number {
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.lap-time {
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+.fastest {
+    color: #4cc9f0;
+    font-weight: bold;
+}
+
+.slowest {
+    color: #f72585;
+    font-weight: bold;
+}
+
+.no-laps {
+    color: #999;
+    font-style: italic;
+    padding: 20px 0;
+}
+
+@media (max-width: 600px) {
+    .display {
+        font-size: 3rem;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

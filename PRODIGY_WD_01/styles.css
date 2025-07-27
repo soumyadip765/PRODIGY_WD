@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+body {
+    color: #333;
+    line-height: 1.6;
+    background-image: url('https://motionarray.imgix.net/motion-array-2743837-nisOGfZrYO-high_0004.jpg?w=660&q=60&fit=max&auto=format');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+nav {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+}
+nav ul li a:hover {
+    color: #ffb300;
+    background-color: rgba(255, 179, 0, 0.1);
+}
+.hero {
+    text-align: center;
+    padding: 3rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    margin: 2rem 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.hero h1 {
+    font-size: 3rem;
+    color: #eeb72b;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+.hero p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+section {
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    margin: 1rem 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+section h2 {
+    color: #d4a017;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+.type-grid, .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.honey-type, .feature {
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.honey-type:hover, .feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.honey-type h3, .feature h3 {
+    color: #d4a017;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+.cta-button {
+    display: inline-block;
+    background-color: #ffb300;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+.cta-button:hover {
+    background-color: #e6a200;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 179, 0, 0.4);
+}
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    section {
+        padding: 1.5rem;
+    }
+}

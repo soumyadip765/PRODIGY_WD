@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="game-container">
+        <h1><i class="fas fa-times"></i> Tic-Tac-Toe <i class="fas fa-circle"></i></h1>
+        
+        <div class="controls">
+            <button id="pvp-btn" class="active"><i class="fas fa-users"></i> PvP</button>
+            <button id="pvc-btn"><i class="fas fa-robot"></i> PvC</button>
+            <div id="difficulty-container" class="hidden">
+                <span>Difficulty:</span>
+                <button data-difficulty="easy">Easy</button>
+                <button data-difficulty="medium" class="active">Medium</button>
+                <button data-difficulty="hard">Hard</button>
+            </div>
+            <button id="reset-btn"><i class="fas fa-redo"></i></button>
+        </div>
+        
+        <div class="status" id="status"><i class="fas fa-user"></i> X's turn</div>
+        
+        <div class="board" id="board"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
